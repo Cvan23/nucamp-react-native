@@ -25,9 +25,19 @@ class Reservation extends Component {
     // }
 
     createAlert() {
+        const message =
+            `        Number of Campers: ${this.state.campers}
+
+        Hike-In? ${this.state.hikeIn}
+
+        Date:  ${this.state.date} `
+       
         Alert.alert(
-            "Alert Title",
-            "My Alert Msg",
+            'Begin Search?',
+             message,
+            
+            
+            
             [
               {
                 text: "Cancel",
@@ -59,7 +69,7 @@ class Reservation extends Component {
     render() {
         
         return (
-            <Animatable.View animation='zoomIn' duration={2000} delay={1000}>
+            <Animatable.View animation='zoomIn' duration={1500} delay={1000}>
                 <View style={styles.formRow}>
                     <Text style={styles.formLabel}>Number of Campers</Text>
                     <Picker
